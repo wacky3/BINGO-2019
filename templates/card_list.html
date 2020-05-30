@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="refresh" content="3; URL=">
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h3 class="text-muted">BINGOカード</h3>
+        <p>お名前：{{message.user_name}}</p>
+        <p>BINGO-Line:{{message.user_bingo}}ライン</p>
+        <p>リーチLine:{{message.user_reach}}ライン</p>
+
+      </div>
+      <div class="body">
+<table border=3>
+<thead>
+<tr high="50">
+<th bgcolor="#ffffaa" style="text-align: center" width="50">　Ｂ　</th>
+<th bgcolor="#ffaaff" style="text-align: center" width="50">　Ⅰ　</th>
+<th bgcolor="#aaffff" style="text-align: center" width="50">　Ｎ　</th>
+<th bgcolor="#ffaaaa" style="text-align: center" width="50">　Ｇ　</th>
+<th bgcolor="#aaaaff" style="text-align: center" width="50">　Ｏ　</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td bgcolor="{% if message.row_b_a[0] == 1 %}#ff0000{% else %}#ffffaa{% endif %}" style="text-align: center">{{message.row_b[0]}}</td>
+<td bgcolor="{% if message.row_i_a[0] == 1 %}#ff0000{% else %}#ffaaff{% endif %}" style="text-align: center">{{message.row_i[0]}}</td>
+<td bgcolor="{% if message.row_n_a[0] == 1 %}#ff0000{% else %}#aaffff{% endif %}" style="text-align: center">{{message.row_n[0]}}</td>
+<td bgcolor="{% if message.row_g_a[0] == 1 %}#ff0000{% else %}#ffaaaa{% endif %}" style="text-align: center">{{message.row_g[0]}}</td>
+<td bgcolor="{% if message.row_o_a[0] == 1 %}#ff0000{% else %}#aaaaff{% endif %}" style="text-align: center">{{message.row_o[0]}}</td>
+</tr>
+<tr>
+<td bgcolor="{% if message.row_b_a[1] == 1 %}#ff0000{% else %}#ffffaa{% endif %}" style="text-align: center">{{message.row_b[1]}}</td>
+<td bgcolor="{% if message.row_i_a[1] == 1 %}#ff0000{% else %}#ffaaff{% endif %}" style="text-align: center">{{message.row_i[1]}}</td>
+<td bgcolor="{% if message.row_n_a[1] == 1 %}#ff0000{% else %}#aaffff{% endif %}" style="text-align: center">{{message.row_n[1]}}</td>
+<td bgcolor="{% if message.row_g_a[1] == 1 %}#ff0000{% else %}#ffaaaa{% endif %}" style="text-align: center">{{message.row_g[1]}}</td>
+<td bgcolor="{% if message.row_o_a[1] == 1 %}#ff0000{% else %}#aaaaff{% endif %}" style="text-align: center">{{message.row_o[1]}}</td>
+</tr>
+<tr>
+<td bgcolor="{% if message.row_b_a[2] == 1 %}#ff0000{% else %}#ffffaa{% endif %}" style="text-align: center">{{message.row_b[2]}}</td>
+<td bgcolor="{% if message.row_i_a[2] == 1 %}#ff0000{% else %}#ffaaff{% endif %}" style="text-align: center">{{message.row_i[2]}}</td>
+<td bgcolor="{% if message.row_n_a[2] == 1 %}#ff0000{% else %}#aaffff{% endif %}" style="text-align: center">Free
+<td bgcolor="{% if message.row_g_a[2] == 1 %}#ff0000{% else %}#ffaaaa{% endif %}" style="text-align: center">{{message.row_g[2]}}</td>
+<td bgcolor="{% if message.row_o_a[2] == 1 %}#ff0000{% else %}#aaaaff{% endif %}" style="text-align: center">{{message.row_o[2]}}</td>
+</tr>
+<tr>
+<td bgcolor="{% if message.row_b_a[3] == 1 %}#ff0000{% else %}#ffffaa{% endif %}" style="text-align: center">{{message.row_b[3]}}</td>
+<td bgcolor="{% if message.row_i_a[3] == 1 %}#ff0000{% else %}#ffaaff{% endif %}" style="text-align: center">{{message.row_i[3]}}</td>
+<td bgcolor="{% if message.row_n_a[3] == 1 %}#ff0000{% else %}#aaffff{% endif %}" style="text-align: center">{{message.row_n[3]}}</td>
+<td bgcolor="{% if message.row_g_a[3] == 1 %}#ff0000{% else %}#ffaaaa{% endif %}" style="text-align: center">{{message.row_g[3]}}</td>
+<td bgcolor="{% if message.row_o_a[3] == 1 %}#ff0000{% else %}#aaaaff{% endif %}" style="text-align: center">{{message.row_o[3]}}</td>
+</tr>
+<tr>
+<td bgcolor="{% if message.row_b_a[4] == 1 %}#ff0000{% else %}#ffffaa{% endif %}" style="text-align: center">{{message.row_b[4]}}</td>
+<td bgcolor="{% if message.row_i_a[4] == 1 %}#ff0000{% else %}#ffaaff{% endif %}" style="text-align: center">{{message.row_i[4]}}</td>
+<td bgcolor="{% if message.row_n_a[4] == 1 %}#ff0000{% else %}#aaffff{% endif %}" style="text-align: center">{{message.row_n[4]}}</td>
+<td bgcolor="{% if message.row_g_a[4] == 1 %}#ff0000{% else %}#ffaaaa{% endif %}" style="text-align: center">{{message.row_g[4]}}</td>
+<td bgcolor="{% if message.row_o_a[4] == 1 %}#ff0000{% else %}#aaaaff{% endif %}" style="text-align: center">{{message.row_o[4]}}</td>
+</tr>
+</tbody>
+</table>
+
+    </div>
+
+
+  </body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h3 class="text-muted">BINGOカード登録</h3>
+        {% if message.error %}
+        <p>{{message.error}}</p>
+        {% endif %}
+      </div>
+
+      <div class="body">
+<form action="/card_input" method="POST">
+
+お名前：<input name="user_name" type="text" value="{{message.user_name}}">
+<input type="submit" name="submit" value="カードを作る">
+
+<table border=3>
+<thead>
+<tr high="50">
+<th bgcolor="#ffffaa" style="text-align: center" width="50">　Ｂ　</th>
+<th bgcolor="#ffaaff" style="text-align: center" width="50">　Ⅰ　</th>
+<th bgcolor="#aaffff" style="text-align: center" width="50">　Ｎ　</th>
+<th bgcolor="#ffaaaa" style="text-align: center" width="50">　Ｇ　</th>
+<th bgcolor="#aaaaff" style="text-align: center" width="50">　Ｏ　</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td bgcolor="#ffffaa" style="text-align: center"><input size="1" name="B1" value="{{message.row_b[0]}}" style="text-align: center"></td>
+<td bgcolor="#ffaaff" style="text-align: center"><input size="1" name="I1" value="{{message.row_i[0]}}" style="text-align: center"></td>
+<td bgcolor="#aaffff" style="text-align: center"><input size="1" name="N1" value="{{message.row_n[0]}}" style="text-align: center"></td>
+<td bgcolor="#ffaaaa" style="text-align: center"><input size="1" name="G1" value="{{message.row_g[0]}}" style="text-align: center"></td>
+<td bgcolor="#aaaaff" style="text-align: center"><input size="1" name="O1" value="{{message.row_o[0]}}" style="text-align: center"></td>
+</tr>
+<tr>
+<td bgcolor="#ffffaa" style="text-align: center"><input size="1" name="B2" value="{{message.row_b[1]}}" style="text-align: center"></td>
+<td bgcolor="#ffaaff" style="text-align: center"><input size="1" name="I2" value="{{message.row_i[1]}}" style="text-align: center"></td>
+<td bgcolor="#aaffff" style="text-align: center"><input size="1" name="N2" value="{{message.row_n[1]}}" style="text-align: center"></td>
+<td bgcolor="#ffaaaa" style="text-align: center"><input size="1" name="G2" value="{{message.row_g[1]}}" style="text-align: center"></td>
+<td bgcolor="#aaaaff" style="text-align: center"><input size="1" name="O2" value="{{message.row_o[1]}}" style="text-align: center"></td>
+</tr>
+<tr>
+<td bgcolor="#ffffaa" style="text-align: center"><input size="1" name="B3" value="{{message.row_b[2]}}" style="text-align: center"></td>
+<td bgcolor="#ffaaff" style="text-align: center"><input size="1" name="I3" value="{{message.row_i[2]}}" style="text-align: center"></td>
+<td bgcolor="#aaffff" style="text-align: center"><input type="hidden" name="N3" value="0">Free</td>
+<td bgcolor="#ffaaaa" style="text-align: center"><input size="1" name="G3" value="{{message.row_g[2]}}" style="text-align: center"></td>
+<td bgcolor="#aaaaff" style="text-align: center"><input size="1" name="O3" value="{{message.row_o[2]}}" style="text-align: center"></td>
+</tr>
+<tr>
+<td bgcolor="#ffffaa" style="text-align: center"><input size="1" name="B4" value="{{message.row_b[3]}}" style="text-align: center"></td>
+<td bgcolor="#ffaaff" style="text-align: center"><input size="1" name="I4" value="{{message.row_i[3]}}" style="text-align: center"></td>
+<td bgcolor="#aaffff" style="text-align: center"><input size="1" name="N4" value="{{message.row_n[3]}}" style="text-align: center"></td>
+<td bgcolor="#ffaaaa" style="text-align: center"><input size="1" name="G4" value="{{message.row_g[3]}}" style="text-align: center"></td>
+<td bgcolor="#aaaaff" style="text-align: center"><input size="1" name="O4" value="{{message.row_o[3]}}" style="text-align: center"></td>
+</tr>
+<tr>
+<td bgcolor="#ffffaa" style="text-align: center"><input size="1" name="B5" value="{{message.row_b[4]}}" style="text-align: center"></td>
+<td bgcolor="#ffaaff" style="text-align: center"><input size="1" name="I5" value="{{message.row_i[4]}}" style="text-align: center"></td>
+<td bgcolor="#aaffff" style="text-align: center"><input size="1" name="N5" value="{{message.row_n[4]}}" style="text-align: center"></td>
+<td bgcolor="#ffaaaa" style="text-align: center"><input size="1" name="G5" value="{{message.row_g[4]}}" style="text-align: center"></td>
+<td bgcolor="#aaaaff" style="text-align: center"><input size="1" name="O5" value="{{message.row_o[4]}}" style="text-align: center"></td>
+</tr>
+</tbody>
+</table>
+
+<input type="submit" name="submit" value="登録する">
+
+</form>
+    </div>
+
+
+  </body>
+</html>

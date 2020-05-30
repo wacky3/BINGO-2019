@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h3 class="text-muted">BINGOカード登録</h3>
+        <p> </p>
+      </div>
+
+      <div class="body">
+<form action="/card_input" method="POST">
+
+お名前：<input name="user_name" type="text" value="">
+<input type="submit" name="submit" value="カードを作る">
+
+<table border=3>
+<thead>
+<tr>
+<th bgcolor="#ffffaa" style="text-align: center"> Ｂ </th>
+<th bgcolor="#ffaaff" style="text-align: center"> Ⅰ </th>
+<th bgcolor="#aaffff" style="text-align: center"> Ｎ </th>
+<th bgcolor="#ffaaaa" style="text-align: center"> Ｇ </th>
+<th bgcolor="#aaaaff" style="text-align: center"> Ｏ </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td bgcolor="#ffffaa" style="text-align: center"><input size="2" name="B1"></td>
+<th bgcolor="#ffaaff" style="text-align: center"><input size="2" name="B2"></td>
+<th bgcolor="#aaffff" style="text-align: center"><input size="2" name="B3"></td>
+<th bgcolor="#ffaaaa" style="text-align: center"><input size="2" name="B4"></td>
+<th bgcolor="#aaaaff" style="text-align: center"><input size="2" name="B5"></td>
+</tr>
+<tr>
+<td bgcolor="#ffffaa" style="text-align: center"><input size="2" name="I1"></td>
+<th bgcolor="#ffaaff" style="text-align: center"><input size="2" name="I2"></td>
+<th bgcolor="#aaffff" style="text-align: center"><input size="2" name="I3"></td>
+<th bgcolor="#ffaaaa" style="text-align: center"><input size="2" name="I4"></td>
+<th bgcolor="#aaaaff" style="text-align: center"><input size="2" name="I5"></td>
+</tr>
+<tr>
+<td bgcolor="#ffffaa" style="text-align: center"><input size="2" name="N1"></td>
+<th bgcolor="#ffaaff" style="text-align: center"><input size="2" name="N2"></td>
+<th bgcolor="#ffffff" style="text-align: center"><input type="hidden" name="N3" value="0">Free</td>
+<th bgcolor="#ffaaaa" style="text-align: center"><input size="2" name="N4"></td>
+<th bgcolor="#aaaaff" style="text-align: center"><input size="2" name="N5"></td>
+</tr>
+<tr>
+<td bgcolor="#ffffaa" style="text-align: center"><input size="2" name="G1"></td>
+<th bgcolor="#ffaaff" style="text-align: center"><input size="2" name="G2"></td>
+<th bgcolor="#aaffff" style="text-align: center"><input size="2" name="G3"></td>
+<th bgcolor="#ffaaaa" style="text-align: center"><input size="2" name="G4"></td>
+<th bgcolor="#aaaaff" style="text-align: center"><input size="2" name="G5"></td>
+</tr>
+<tr>
+<td bgcolor="#ffffaa" style="text-align: center"><input size="2" name="O1"></td>
+<th bgcolor="#ffaaff" style="text-align: center"><input size="2" name="O2"></td>
+<th bgcolor="#aaffff" style="text-align: center"><input size="2" name="O3"></td>
+<th bgcolor="#ffaaaa" style="text-align: center"><input size="2" name="O4"></td>
+<th bgcolor="#aaaaff" style="text-align: center"><input size="2" name="O5"></td>
+</tr>
+</tbody>
+</table>
+
+<input type="submit" name="submit" value="登録する">
+
+</form>
+    </div>
+
+
+  </body>
+</html>
